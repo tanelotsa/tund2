@@ -33,8 +33,12 @@
 <br>
 
 <?php
-	echo date("d . F . Y  H:i:s");
+	echo date("d.F.Y");
 	
+?>
 
+<br>
 
+<?php
+	echo date("H:i:s");
 ?>
