@@ -15,7 +15,7 @@
 		if(empty($_POST["signupEmail"])) {
 			
 			//on tühi
-			echo "Väli on kohustuslik!";
+			$signupEmailError = "Väli on kohustuslik!";
 		
 		}
 	
@@ -23,9 +23,17 @@
 	
 	//kas epost on tühi
 	
+	$signupPasswordError = "*";
 	
-	
-	
+	if (isset ($_POST["signupPassword"])) {
+		
+		if(empty($_POST["signupPassword"])) {
+			
+			$signupPasswordError = "Väli on kohustuslik";
+		}
+		
+		
+	}
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +71,7 @@
 		<br><br>
 		<label>Parool</label>
 		<br>
-		<input name="signupPassword" type = "password" >
+		<input name="signupPassword" type = "password" > <?php echo $signupPasswordError; ?>
 	
 		<br><br>
 		
